@@ -11,22 +11,18 @@ public class MainTv {
         int volume, canal, opcao;
         try {
             System.out.print("Informe um canal: ");
-            canal = scan.nextInt();
+            tv.setCanal(scan.nextInt());
             System.out.print("Informe o nivel do volume: ");
-            volume = scan.nextInt();
-            tv.setCanal(canal);
-            tv.setVolume(volume);
+            tv.setVolume(scan.nextInt());
 
             System.out.println("1-Trocar Canal: \n2-Trocar Volume: \n3-Aumentar: \n4-Diminuir: ");
             opcao = scan.nextInt();
             if (opcao == 1) {
                 System.out.print("Digite o novo canal: ");
-                canal = scan.nextInt();
-                tv.setCanal(canal);
+                tv.setCanal(scan.nextInt());
             } else if (opcao == 2) {
                 System.out.print("Digite o novo nivel de Volume: ");
-                volume = scan.nextInt();
-                tv.setVolume(volume);
+                tv.setVolume(scan.nextInt());
             } else if (opcao == 3) {
                 tv.aumentarVolume();
                 System.out.print("Volume Aumentado");
@@ -36,7 +32,7 @@ public class MainTv {
             } else {
                 System.out.println("Opção inválida!");
             }
-            System.out.printf("Canal atual: %d %nVolume atual: %d%n", tv.getCanal(), tv.getVolume());
+            System.out.printf("Canal atual: %d\nVolume atual: %d\n", tv.getCanal(), tv.getVolume());
         } catch (Exception e) {
             System.out.println("Formato Invalido!");
         }

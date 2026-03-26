@@ -28,6 +28,7 @@ public class Televisor {
             if (canal == 2 || canal == 4 || canal == 5 || canal == 7 || canal == 13){
                 this.canal = canal;
             } else {
+                this.canal = 2;
                 throw new Exception("Canais fora dos permitidos!");
             }
         } catch (Exception e) {
